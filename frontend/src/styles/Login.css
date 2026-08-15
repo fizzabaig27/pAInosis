@@ -1,0 +1,179 @@
+    .auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--paper);
+    font-family: 'Inter', sans-serif;
+    padding: 24px;
+    }
+
+    .auth-card {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 44px 44px 36px;
+    box-shadow: 0 30px 70px -30px rgba(11, 26, 43, 0.3);
+    overflow: hidden;
+    }
+
+    .auth-card-rule {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    opacity: 0.9;
+    }
+
+    .auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+    }
+
+    .auth-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--ink);
+    text-decoration: none;
+    margin-bottom: 18px;
+    }
+
+    .brand-mark {
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--scan-blue), var(--teal) 55%, var(--heat-red));
+    flex-shrink: 0;
+    }
+
+    .auth-eyebrow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    }
+
+    .auth-title {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: var(--ink);
+    margin-bottom: 8px;
+    }
+
+    .auth-subtitle {
+    font-size: 14px;
+    color: var(--slate);
+    }
+
+    .auth-form { display: flex; flex-direction: column; gap: 14px; }
+
+    .auth-input {
+    background: var(--paper-dim);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 18px;
+    font-family: inherit;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    .auth-input::placeholder { color: var(--slate); }
+    .auth-input:focus { border-color: var(--teal); background: white; }
+
+    .auth-forgot {
+    font-size: 13px;
+    color: var(--slate);
+    text-decoration: underline;
+    margin-top: -4px;
+    align-self: flex-start;
+    }
+    .auth-forgot:hover { color: var(--teal-deep); }
+
+    .auth-error {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-line);
+    color: var(--amber-text);
+    font-size: 16px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    }
+
+    .auth-submit {
+    background: var(--ink);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    margin-top: 4px;
+    }
+    .auth-submit:hover:not(:disabled) { background: var(--teal-deep); }
+    .auth-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 4px 0;
+    font-size: 13px;
+    color: var(--slate);
+    }
+    .auth-divider::before,
+    .auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+    }
+
+    .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    .google-btn:hover { border-color: var(--slate); background: var(--paper-dim); }
+
+    .auth-switch {
+    display: block;
+    margin: 22px auto 0;
+    background: none;
+    border: none;
+    color: var(--slate);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    }
+    .auth-switch:hover { color: var(--teal-deep); text-decoration: underline; }
+    .auth-success {
+    background: #e3f5e9;
+    border: 1px solid #16653f;
+    color: #16653f;
+    font-size: 16px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    }
+    .google-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    }

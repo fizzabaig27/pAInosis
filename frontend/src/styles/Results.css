@@ -1,0 +1,76 @@
+:root {
+  --ink: #0b1a2b; --ink-soft: #1c3049; --paper: #f5f8fa; --paper-dim: #eaeff2;
+  --teal: #027a86; --teal-deep: #015964; --scan-blue: #3b6fd1; --heat-red: #d8402f;
+  --slate: #5c6b7a; --line: #d7dee3; --amber-bg: #fff6e0; --amber-line: #e3a721; --amber-text: #7a5a05;
+}
+
+.results-page { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; min-height: 100vh; }
+.results-page .wrap { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+
+.results-nav {
+  position: sticky; top: 0; z-index: 50; background: rgba(245, 248, 250, 0.9);
+  backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+}
+.results-nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+
+.results-body { padding: 44px 0 80px; }
+.results-title { font-family: 'Newsreader', serif; font-weight: 500; font-size: 32px; letter-spacing: -0.01em; margin: 14px 0 32px; }
+
+.results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+@media (max-width: 720px) { .results-grid { grid-template-columns: 1fr; } }
+
+.results-image-card { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: white; }
+.results-image-card img { width: 100%; display: block; }
+
+.results-diagnosis-card { border: 1px solid var(--line); border-radius: 14px; padding: 24px; background: white; }
+.results-class { font-family: 'Newsreader', serif; font-size: 26px; margin: 4px 0; }
+.results-confidence { font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: var(--slate); }
+
+.results-review-flag {
+  background: var(--amber-bg); border: 1px solid var(--amber-line); color: var(--amber-text);
+  padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-top: 14px;
+}
+
+.results-prob-row { margin-top: 14px; }
+.results-prob-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; }
+.results-prob-bar-bg { background: var(--paper-dim); border-radius: 4px; height: 8px; overflow: hidden; }
+.results-prob-bar-fill { height: 100%; border-radius: 4px; background: var(--slate); transition: width 0.3s ease; }
+.results-prob-bar-fill.predicted { background: var(--teal); }
+
+.results-actions { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+
+.btn-primary {
+  background: var(--ink); color: white; padding: 10px 20px; border-radius: 8px;
+  font-weight: 600; font-size: 14px; border: none; cursor: pointer; transition: background 0.15s ease;
+}
+.btn-primary:hover { background: var(--teal-deep); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-ghost {
+  background: transparent; color: var(--ink); padding: 10px 18px; border-radius: 8px;
+  font-weight: 600; font-size: 14px; border: 1px solid var(--line); cursor: pointer;
+}
+.btn-ghost:hover { border-color: var(--ink); }
+
+.results-error {
+  background: var(--amber-bg); border: 1px solid var(--amber-line); color: var(--amber-text);
+  padding: 14px 18px; border-radius: 10px; text-align: center; margin: 40px 0;
+}
+
+.mono { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--slate); }
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--teal-deep); display: inline-flex; align-items: center; gap: 8px;
+}
+.eyebrow::before { content: ""; width: 14px; height: 1px; background: var(--teal-deep); display: inline-block; }
+.research-disclaimer {
+  background: var(--amber-bg); border: 1px solid var(--amber-line); color: var(--amber-text);
+  padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 20px;
+}
+.results-class-research { font-family: 'IBM Plex Mono', monospace; font-size: 20px; font-weight: 600; margin: 6px 0; color: var(--ink); }
+.validation-panel { border-top: 1px solid var(--line); margin-top: 20px; padding-top: 16px; }
+.validation-note { font-size: 12px; color: var(--slate); margin-top: 8px; line-height: 1.5; }
+.metrics-grid { display: flex; gap: 24px; margin-top: 10px; }
+.metric-item { display: flex; flex-direction: column; gap: 2px; }
+.metric-label { font-size: 12px; color: var(--slate); }
+.metric-value { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; color: var(--teal-deep); }

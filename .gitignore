@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+venv/
+
+# Environment files
+**/.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Uploads / user data / storage
+backend/uploads/
+backend/storage/
